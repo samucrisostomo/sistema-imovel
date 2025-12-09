@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sistema de gerenciamento de manutenção de imóveis">
+    <title>Sistema de Manutenção de Imóveis - Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Sistema de Manutenção de Imóveis</h1>
+    </header>
+
+    <main>
+        <section class="auth-container" id="loginSection">
+            <div class="auth-card">
+                <h2>Entrar na sua conta</h2>
+                <form id="loginForm" novalidate>
+                    <div class="form-group">
+                        <label for="loginEmail">E-mail</label>
+                        <input 
+                            type="email" 
+                            id="loginEmail" 
+                            name="email" 
+                            required 
+                            placeholder="seu@email.com"
+                            aria-required="true"
+                        >
+                        <span class="error-message" id="loginEmailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loginPassword">Senha</label>
+                        <input 
+                            type="password" 
+                            id="loginPassword" 
+                            name="password" 
+                            required 
+                            minlength="6"
+                            placeholder="Mínimo 6 caracteres"
+                            aria-required="true"
+                        >
+                        <span class="error-message" id="loginPasswordError"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Entrar</button>
+                    <span class="error-message" id="loginError"></span>
+                </form>
+
+                <p class="toggle-text">
+                    Não tem uma conta? 
+                    <button type="button" class="link-button" id="showRegister">Criar conta</button>
+                </p>
+            </div>
+        </section>
+
+        <section class="auth-container hidden" id="registerSection">
+            <div class="auth-card">
+                <h2>Criar nova conta</h2>
+                <form id="registerForm" novalidate>
+                    <div class="form-group">
+                        <label for="registerName">Nome completo</label>
+                        <input 
+                            type="text" 
+                            id="registerName" 
+                            name="name" 
+                            required 
+                            minlength="3"
+                            maxlength="100"
+                            placeholder="Seu nome completo"
+                            aria-required="true"
+                        >
+                        <span class="error-message" id="registerNameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerEmail">E-mail</label>
+                        <input 
+                            type="email" 
+                            id="registerEmail" 
+                            name="email" 
+                            required 
+                            placeholder="seu@email.com"
+                            aria-required="true"
+                        >
+                        <span class="error-message" id="registerEmailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerPassword">Senha</label>
+                        <input 
+                            type="password" 
+                            id="registerPassword" 
+                            name="password" 
+                            required 
+                            minlength="6"
+                            maxlength="50"
+                            placeholder="Mínimo 6 caracteres"
+                            aria-required="true"
+                        >
+                        <span class="error-message" id="registerPasswordError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerConfirmPassword">Confirmar senha</label>
+                        <input 
+                            type="password" 
+                            id="registerConfirmPassword" 
+                            name="confirmPassword" 
+                            required 
+                            minlength="6"
+                            maxlength="50"
+                            placeholder="Digite a senha novamente"
+                            aria-required="true"
+                        >
+                        <span class="error-message" id="registerConfirmPasswordError"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Criar conta</button>
+                    <span class="error-message" id="registerError"></span>
+                </form>
+
+                <p class="toggle-text">
+                    Já tem uma conta? 
+                    <button type="button" class="link-button" id="showLogin">Fazer login</button>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Sistema de Manutenção de Imóveis. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
